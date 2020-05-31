@@ -1,7 +1,7 @@
-site: Sidey
+site: Pry's Blog
 url:
-title: Sidey
-description: Simple and minimalistic jekyll blogging theme.
+title: Pry's Blog
+description: It's a blog... what more can I say?
 author:
   name: Pranoy Dutta
   avatar:
@@ -9,7 +9,7 @@ author:
   url: prydt.xyz
 permalink: pretty
 
-baseurl: ""
+baseurl: "prydt.xyz/b"
 
 highlighter: none
 
