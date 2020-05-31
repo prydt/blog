@@ -1,5 +1,5 @@
 site: Pry's Blog
-url:
+url: "prydt.xyz"
 title: Pry's Blog
 description: It's a blog... what more can I say?
 author:
@@ -9,7 +9,7 @@ author:
   url: prydt.xyz
 permalink: pretty
 
-baseurl: "prydt.xyz/b"
+baseurl: "b"
 
 highlighter: none
 
