@@ -9,8 +9,6 @@ author:
   url: prydt.xyz
 permalink: pretty
 
-baseurl: "b"
-
 highlighter: none
 
 exclude:
