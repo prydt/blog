@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>prydt.xyz/about</loc>
-<lastmod>2020-05-31T18:36:47-05:00</lastmod>
+<loc>prydt.xyz/b/about</loc>
+<lastmod>2020-05-31T18:40:58-05:00</lastmod>
 </url>
 <url>
-<loc>prydt.xyz/search</loc>
-<lastmod>2020-05-31T18:36:47-05:00</lastmod>
+<loc>prydt.xyz/b/search</loc>
+<lastmod>2020-05-31T18:40:58-05:00</lastmod>
 </url>
 <url>
-<loc>prydt.xyz/2020/05/31/making-a-blog</loc>
+<loc>prydt.xyz/b/2020/05/31/making-a-blog</loc>
 <lastmod>2020-05-31T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>prydt.xyz/</loc>
+<loc>prydt.xyz/b/</loc>
 </url>
 <url>
-<loc>prydt.xyz/tag/blogging/</loc>
+<loc>prydt.xyz/b/tag/blogging/</loc>
 </url>
 <url>
-<loc>prydt.xyz/tag/jekyll/</loc>
+<loc>prydt.xyz/b/tag/jekyll/</loc>
 </url>
 </urlset>

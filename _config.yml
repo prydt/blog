@@ -1,5 +1,6 @@
 site: Pry's Blog
 url: "prydt.xyz"
+baseurl: "/b"
 title: Pry's Blog
 description: It's a blog... what more can I say?
 author:
