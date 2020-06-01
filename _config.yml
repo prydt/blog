@@ -31,10 +31,10 @@ plugins:
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:name:output_ext
   posts:
     output: true
-    permalink: /:year/:month/:day/:slug
+    permalink: /:year/:month/:day/:slug:output_ext
 
 defaults:
   -
