@@ -1,15 +1,14 @@
-site: Sidey
-url:
-title: Sidey
-description: Simple and minimalistic jekyll blogging theme.
+site: Pry's Blog
+url: "prydt.xyz"
+baseurl: "/b"
+title: Pry's Blog
+description: It's a blog... what more can I say?
 author:
   name: Pranoy Dutta
   avatar:
   email: pranoydll@gmail.com
   url: prydt.xyz
 permalink: pretty
-
-baseurl: ""
 
 highlighter: none
 
@@ -32,10 +31,10 @@ plugins:
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:name:output_ext
   posts:
     output: true
-    permalink: /:year/:month/:day/:slug
+    permalink: /:year/:month/:day/:slug:output_ext
 
 defaults:
   -
