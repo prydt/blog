@@ -2,15 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>prydt.xyz/b/about.html</loc>
-<lastmod>2020-06-15T20:51:16-05:00</lastmod>
+<lastmod>2020-06-16T10:52:09-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/search.html</loc>
-<lastmod>2020-06-15T20:51:16-05:00</lastmod>
+<lastmod>2020-06-16T10:52:09-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/2020/05/31/making-a-blog.html</loc>
 <lastmod>2020-05-31T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>prydt.xyz/b/2020/06/16/installing-spike.html</loc>
+<lastmod>2020-06-16T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/</loc>
@@ -20,5 +24,11 @@
 </url>
 <url>
 <loc>prydt.xyz/b/tag/jekyll/</loc>
+</url>
+<url>
+<loc>prydt.xyz/b/tag/riscv/</loc>
+</url>
+<url>
+<loc>prydt.xyz/b/tag/linux/</loc>
 </url>
 </urlset>
