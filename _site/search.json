@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "Breakfast of Champions Review",
+      "url"      : "/b/2020/07/12/breakfast-of-champions.html",
+      "category" : "",
+      "tags"     : "books",
+      "date"     : "2020-07-12 00:00:00 -0500",
+      "discription" : "My thoughts on a Kurt Vonnegut Novel."
+
+    } ,
+  
+    {
+
       "title"    : "Installing the Spike RISC-V Simulator",
       "url"      : "/b/2020/06/16/installing-spike.html",
       "category" : "",
