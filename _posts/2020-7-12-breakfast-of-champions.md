@@ -6,8 +6,6 @@ summary: An interesting novel on race and conflict in America still relevant tod
 tags: [books]
 ---
 
-# Breakfast of Champions Review
-
 I haven't been reading much lately.
 But I did finish Breakfast of Champions by Kurt Vonnegut finally and it was an interesting novel.
 I've been a fan of his work for a while already and loved Slaughterhouse Five and The Sirens of Titan both of which were unconventional sci-fi stories.
