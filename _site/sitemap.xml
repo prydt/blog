@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>prydt.xyz/b/about.html</loc>
-<lastmod>2020-07-12T12:43:14-05:00</lastmod>
+<lastmod>2020-07-18T18:48:41-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/search.html</loc>
-<lastmod>2020-07-12T12:43:14-05:00</lastmod>
+<lastmod>2020-07-18T18:48:41-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/2020/05/31/making-a-blog.html</loc>
@@ -19,6 +19,10 @@
 <url>
 <loc>prydt.xyz/b/2020/07/12/breakfast-of-champions.html</loc>
 <lastmod>2020-07-12T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>prydt.xyz/b/2020/07/18/trott-constants.html</loc>
+<lastmod>2020-07-18T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>prydt.xyz/b/</loc>
@@ -37,5 +41,11 @@
 </url>
 <url>
 <loc>prydt.xyz/b/tag/books/</loc>
+</url>
+<url>
+<loc>prydt.xyz/b/tag/math/</loc>
+</url>
+<url>
+<loc>prydt.xyz/b/tag/research/</loc>
 </url>
 </urlset>

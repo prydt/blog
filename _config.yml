@@ -10,7 +10,7 @@ author:
   url: prydt.xyz
 permalink: pretty
 
-highlighter: none
+highlighter: rouge
 
 exclude:
   - .jekyll-cache
