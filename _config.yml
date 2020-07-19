@@ -1,5 +1,5 @@
 site: Pry's Blog
-url: "prydt.xyz"
+url: "https://prydt.xyz"
 baseurl: "/b"
 title: Pry's Blog
 description: It's a blog... what more can I say?
@@ -7,7 +7,7 @@ author:
   name: Pranoy Dutta
   avatar:
   email: pranoydll@gmail.com
-  url: prydt.xyz
+  url: https://prydt.xyz
 permalink: pretty
 
 highlighter: rouge

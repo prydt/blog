@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: prydt.xyz/sitemap.xml
+Sitemap: https://prydt.xyz/sitemap.xml

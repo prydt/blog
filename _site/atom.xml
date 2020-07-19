@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Pry's Blog</title>
- <link href="prydt.xyz/b/atom.xml" rel="self"/>
- <link href="prydt.xyz/b/"/>
- <updated>2020-07-18T18:48:41-05:00</updated>
- <id>prydt.xyz</id>
+ <link href="https://prydt.xyz/b/atom.xml" rel="self"/>
+ <link href="https://prydt.xyz/b/"/>
+ <updated>2020-07-19T18:34:36-05:00</updated>
+ <id>https://prydt.xyz</id>
  <author>
    <name>Pranoy Dutta</name>
    <email>pranoydll@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Finding Trott Constants</title>
-   <link href="prydt.xyz/b/2020/07/18/trott-constants.html"/>
+   <link href="https://prydt.xyz/b/2020/07/18/trott-constants.html"/>
    <updated>2020-07-18T00:00:00-05:00</updated>
-   <id>prydt.xyz/2020/07/18/trott-constants</id>
+   <id>https://prydt.xyz/2020/07/18/trott-constants</id>
    <content type="html">&lt;p&gt;So I recently had the pleasure of joining a research group in the field of measure theory and an interesting problem was brought up. The problem was whether Trott constants existed if you used to typical notion of a continued fraction.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -291,9 +291,9 @@ True
  
  <entry>
    <title>Breakfast of Champions Review</title>
-   <link href="prydt.xyz/b/2020/07/12/breakfast-of-champions.html"/>
+   <link href="https://prydt.xyz/b/2020/07/12/breakfast-of-champions.html"/>
    <updated>2020-07-12T00:00:00-05:00</updated>
-   <id>prydt.xyz/2020/07/12/breakfast-of-champions</id>
+   <id>https://prydt.xyz/2020/07/12/breakfast-of-champions</id>
    <content type="html">&lt;p&gt;I haven’t been reading much lately.
 But I did finish Breakfast of Champions by Kurt Vonnegut finally and it was an interesting novel.
 I’ve been a fan of his work for a while already and loved Slaughterhouse Five and The Sirens of Titan both of which were unconventional sci-fi stories.&lt;/p&gt;
@@ -314,9 +314,9 @@ It is less about the event but about the surrounding characters and their enviro
  
  <entry>
    <title>Installing the Spike RISC-V Simulator</title>
-   <link href="prydt.xyz/b/2020/06/16/installing-spike.html"/>
+   <link href="https://prydt.xyz/b/2020/06/16/installing-spike.html"/>
    <updated>2020-06-16T00:00:00-05:00</updated>
-   <id>prydt.xyz/2020/06/16/installing-spike</id>
+   <id>https://prydt.xyz/2020/06/16/installing-spike</id>
    <content type="html">&lt;p&gt;Spike is a RISC-V Simulator. Here are the steps to installing Spike from source for 32bit simulation.&lt;/p&gt;
 
 &lt;p&gt;Dependencies:&lt;/p&gt;
@@ -385,9 +385,9 @@ RISCV/riscv-isa-sim/build/spike --isa=RV32IMAC RISCV/riscv-pk/build/pk a.out
  
  <entry>
    <title>Introductions | Making a Blog!</title>
-   <link href="prydt.xyz/b/2020/05/31/making-a-blog.html"/>
+   <link href="https://prydt.xyz/b/2020/05/31/making-a-blog.html"/>
    <updated>2020-05-31T00:00:00-05:00</updated>
-   <id>prydt.xyz/2020/05/31/making-a-blog</id>
+   <id>https://prydt.xyz/2020/05/31/making-a-blog</id>
    <content type="html">&lt;p&gt;I’m committing to writing a blog. This may or may not be my 3rd attempt and I’m just going to go and stick with it. I think that’s the best course of action. Previously, I was too caught up with what static site generator to use or exactly what to post and this time I’m just sticking with something basic and will continue.&lt;/p&gt;
 
 &lt;p&gt;My set up for blogging is rather simple. I’m using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; which is not the newest or flashiest static site generator but it gets the job done. The theme I am using is called &lt;a href=&quot;https://github.com/ronv/sidey&quot;&gt;Sidey&lt;/a&gt; and I personally think it looks amazing.&lt;/p&gt;
