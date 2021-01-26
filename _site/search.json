@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "My TEDx Talk: Our Technology Dystopia and How to Survive in It",
+      "url"      : "/b/2021/01/26/our-technology-dystopia.html",
+      "category" : "",
+      "tags"     : "tedx, technology",
+      "date"     : "2021-01-26 00:00:00 -0600",
+      "discription" : "A script of my TEDx talk."
+
+    } ,
+  
+    {
+
       "title"    : "Finding Trott Constants",
       "url"      : "/b/2020/07/18/trott-constants.html",
       "category" : "",
