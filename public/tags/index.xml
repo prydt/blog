@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on pry&#39;s blog</title>
+    <link>https://prydt.xyz/tags/</link>
+    <description>Recent content in Tags on pry&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Pranoy Dutta</copyright>
+    <lastBuildDate>Tue, 26 Jan 2021 15:55:51 -0500</lastBuildDate><atom:link href="https://prydt.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>technology</title>
+      <link>https://prydt.xyz/tags/technology/</link>
+      <pubDate>Tue, 26 Jan 2021 15:55:51 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tedx</title>
+      <link>https://prydt.xyz/tags/tedx/</link>
+      <pubDate>Tue, 26 Jan 2021 15:55:51 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/tedx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://prydt.xyz/tags/math/</link>
+      <pubDate>Sat, 18 Jul 2020 15:52:28 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://prydt.xyz/tags/research/</link>
+      <pubDate>Sat, 18 Jul 2020 15:52:28 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>https://prydt.xyz/tags/books/</link>
+      <pubDate>Sun, 12 Jul 2020 15:49:53 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://prydt.xyz/tags/linux/</link>
+      <pubDate>Tue, 16 Jun 2020 15:45:34 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>riscv</title>
+      <link>https://prydt.xyz/tags/riscv/</link>
+      <pubDate>Tue, 16 Jun 2020 15:45:34 -0500</pubDate>
+      
+      <guid>https://prydt.xyz/tags/riscv/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

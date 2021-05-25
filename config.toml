@@ -1,0 +1,48 @@
+baseURL = "https://prydt.xyz/"
+languageCode = "en-us"
+title = "pry's blog"
+theme = "cactus"
+copyright = "Pranoy Dutta"
+
+[author]
+name = "Pranoy Dutta"
+
+[params]
+colortheme = "classic"
+description = "pry's blog!"
+mainSection = "posts"
+showAllPostsOnHomePage = false
+postsOnHomePage = 5
+tagsOverview = true
+rss = true
+mathjax = true
+# showProjectsList = true
+# projectsUrl = "https://github.com/prydt"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "https://prydt.xyz"
+weight = 4
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/prydt"
+
+[[params.social]]
+  name = "email"
+  link = "pranoydll@gmail.com" # no need for "mailto:" at the start
