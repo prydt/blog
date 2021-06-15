@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pry&#39;s blog</title>
-    <link>https://prydt.xyz/</link>
+    <link>https://blog.prydt.xyz/</link>
     <description>Recent content on pry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:36:28 -0500</lastBuildDate><atom:link href="https://prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 May 2021 15:36:28 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Revamping my Blog!</title>
-      <link>https://prydt.xyz/posts/my-first-post/</link>
+      <link>https://blog.prydt.xyz/posts/my-first-post/</link>
       <pubDate>Tue, 25 May 2021 15:36:28 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/my-first-post/</guid>
+      <guid>https://blog.prydt.xyz/posts/my-first-post/</guid>
       <description>My First Post (on Hugo)! HEY!! Welcome to my blog. My current blog set up uses hugo and the amazing cactus theme! The RSS feed is here!
 My set up is simple and should encourage me to write more than worrying about setting up the blog.</description>
     </item>
     
     <item>
       <title>Our Technology Dystopia and How to Survive in It</title>
-      <link>https://prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</link>
+      <link>https://blog.prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</link>
       <pubDate>Tue, 26 Jan 2021 15:55:51 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</guid>
+      <guid>https://blog.prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</guid>
       <description>We are living in a dystopia. A dystopia without the neon lights and synth-heavy soundtracks that we are used to seeing in movies but a dystopia that is no less dangerous and despotic. A bold claim, I know, but it is an increasingly accurate and justified description of our world today.</description>
     </item>
     
     <item>
       <title>Finding Trott Constants</title>
-      <link>https://prydt.xyz/posts/finding-trott-constants/</link>
+      <link>https://blog.prydt.xyz/posts/finding-trott-constants/</link>
       <pubDate>Sat, 18 Jul 2020 15:52:28 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/finding-trott-constants/</guid>
+      <guid>https://blog.prydt.xyz/posts/finding-trott-constants/</guid>
       <description>My work in finding possible Trott constants.</description>
     </item>
     
     <item>
       <title>Breakfast of Champions Review</title>
-      <link>https://prydt.xyz/posts/breakfast-of-champions-review/</link>
+      <link>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</link>
       <pubDate>Sun, 12 Jul 2020 15:49:53 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/breakfast-of-champions-review/</guid>
+      <guid>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</guid>
       <description>An interesting novel on race and conflict in America still relevant today.</description>
     </item>
     
     <item>
       <title>Installing Riscv Spike Simulator</title>
-      <link>https://prydt.xyz/posts/installing-riscv-spike-simulator/</link>
+      <link>https://blog.prydt.xyz/posts/installing-riscv-spike-simulator/</link>
       <pubDate>Tue, 16 Jun 2020 15:45:34 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/installing-riscv-spike-simulator/</guid>
+      <guid>https://blog.prydt.xyz/posts/installing-riscv-spike-simulator/</guid>
       <description>Spike is a RISC-V Simulator. Here are the steps to installing Spike from source for 32bit simulation.
 Dependencies:
  Device Tree Compiler  # Arch Linux sudo pacman -S dtc # Ubuntu / Debian sudo apt install device-tree-compiler Installing Spike

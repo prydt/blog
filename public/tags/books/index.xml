@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>books on pry&#39;s blog</title>
-    <link>https://prydt.xyz/tags/books/</link>
+    <link>https://blog.prydt.xyz/tags/books/</link>
     <description>Recent content in books on pry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Sun, 12 Jul 2020 15:49:53 -0500</lastBuildDate><atom:link href="https://prydt.xyz/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jul 2020 15:49:53 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/tags/books/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breakfast of Champions Review</title>
-      <link>https://prydt.xyz/posts/breakfast-of-champions-review/</link>
+      <link>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</link>
       <pubDate>Sun, 12 Jul 2020 15:49:53 -0500</pubDate>
       
-      <guid>https://prydt.xyz/posts/breakfast-of-champions-review/</guid>
+      <guid>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</guid>
       <description>An interesting novel on race and conflict in America still relevant today.</description>
     </item>
     

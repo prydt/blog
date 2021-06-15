@@ -1,4 +1,4 @@
-baseURL = "https://prydt.xyz/"
+baseURL = "https://blog.prydt.xyz/"
 languageCode = "en-us"
 title = "pry's blog"
 theme = "cactus"

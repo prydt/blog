@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://prydt.xyz/posts/</loc>
+    <loc>https://blog.prydt.xyz/posts/</loc>
     <lastmod>2021-05-25T15:36:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/</loc>
+    <loc>https://blog.prydt.xyz/</loc>
     <lastmod>2021-05-25T15:36:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/posts/my-first-post/</loc>
+    <loc>https://blog.prydt.xyz/posts/my-first-post/</loc>
     <lastmod>2021-05-25T15:36:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</loc>
+    <loc>https://blog.prydt.xyz/posts/our-technology-dystopia-and-how-to-survive-in-it/</loc>
     <lastmod>2021-01-26T15:55:51-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/</loc>
+    <loc>https://blog.prydt.xyz/tags/</loc>
     <lastmod>2021-01-26T15:55:51-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/technology/</loc>
+    <loc>https://blog.prydt.xyz/tags/technology/</loc>
     <lastmod>2021-01-26T15:55:51-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/tedx/</loc>
+    <loc>https://blog.prydt.xyz/tags/tedx/</loc>
     <lastmod>2021-01-26T15:55:51-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/posts/finding-trott-constants/</loc>
+    <loc>https://blog.prydt.xyz/posts/finding-trott-constants/</loc>
     <lastmod>2020-07-18T15:52:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/math/</loc>
+    <loc>https://blog.prydt.xyz/tags/math/</loc>
     <lastmod>2020-07-18T15:52:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/research/</loc>
+    <loc>https://blog.prydt.xyz/tags/research/</loc>
     <lastmod>2020-07-18T15:52:28-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/books/</loc>
+    <loc>https://blog.prydt.xyz/tags/books/</loc>
     <lastmod>2020-07-12T15:49:53-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/posts/breakfast-of-champions-review/</loc>
+    <loc>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</loc>
     <lastmod>2020-07-12T15:49:53-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/posts/installing-riscv-spike-simulator/</loc>
+    <loc>https://blog.prydt.xyz/posts/installing-riscv-spike-simulator/</loc>
     <lastmod>2020-06-16T15:45:34-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/linux/</loc>
+    <loc>https://blog.prydt.xyz/tags/linux/</loc>
     <lastmod>2020-06-16T15:45:34-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/tags/riscv/</loc>
+    <loc>https://blog.prydt.xyz/tags/riscv/</loc>
     <lastmod>2020-06-16T15:45:34-05:00</lastmod>
   </url><url>
-    <loc>https://prydt.xyz/categories/</loc>
+    <loc>https://blog.prydt.xyz/categories/</loc>
   </url>
 </urlset>
