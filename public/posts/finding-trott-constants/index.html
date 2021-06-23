@@ -238,8 +238,8 @@
     <span style="color:#66d9ef">return</span> total
 </code></pre></div><p>We shall test the our count digits function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">99</span>]
-<span style="color:#66d9ef">print</span>(count_digits(a))
-<span style="color:#66d9ef">print</span>(a)
+print(count_digits(a))
+print(a)
 </code></pre></div><p>output:</p>
 <pre><code class="language-commandline" data-lang="commandline">7
 [100, 5, 7, 99]
@@ -260,7 +260,7 @@ cf_to_real(cf, count_digits(cf) <span style="color:#f92672">+</span> <span style
 <h2 id="continued-fraction-to-expected-trott-constant-approximation">Continued Fraction to Expected Trott Constant approximation</h2>
 <p>Here we are calculating what the real number needs to equal if this CF is a trott constant approximate.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cf_to_trott_approx</span>(cf_list):
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0.{}&#34;</span><span style="color:#f92672">.</span>format(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(map(str,cf_list)))
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0.</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(map(str,cf_list)))
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cf <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>]
 cf_to_trott_approx(cf)
 </code></pre></div><p>output:</p>
@@ -276,14 +276,14 @@ cf_to_trott_approx(cf)
         <span style="color:#75715e"># print(&#34;{} {}&#34;.format(real, want)) # for debugging</span>
         <span style="color:#66d9ef">return</span> real <span style="color:#f92672">==</span> want
 </code></pre></div><p>Testing the <code>valid_trott</code> function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>])) <span style="color:#75715e"># true</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>])) <span style="color:#75715e"># false</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>])) <span style="color:#75715e"># true</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">30</span>])) <span style="color:#75715e"># false</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>])) <span style="color:#75715e"># true</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">333329</span>])) <span style="color:#75715e"># true</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3333329</span>])) <span style="color:#75715e"># true</span>
-<span style="color:#66d9ef">print</span>(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">33333329</span>])) <span style="color:#75715e"># true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>])) <span style="color:#75715e"># true</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>])) <span style="color:#75715e"># false</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>])) <span style="color:#75715e"># true</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">30</span>])) <span style="color:#75715e"># false</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>])) <span style="color:#75715e"># true</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">333329</span>])) <span style="color:#75715e"># true</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3333329</span>])) <span style="color:#75715e"># true</span>
+print(valid_trott([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">33333329</span>])) <span style="color:#75715e"># true</span>
 </code></pre></div><p>output:</p>
 <pre><code>True
 False
@@ -302,15 +302,15 @@ True
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, ITEM_MAX):
     a <span style="color:#f92672">=</span> [i]
     <span style="color:#66d9ef">if</span> valid_trott(a):
-        <span style="color:#66d9ef">print</span>(a)
+        print(a)
         <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, ITEM_MAX):
             a <span style="color:#f92672">=</span> [i,j]
             <span style="color:#66d9ef">if</span> valid_trott(a):
-                <span style="color:#66d9ef">print</span>(a)
+                print(a)
                 <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, ITEM_MAX):
                     a<span style="color:#f92672">=</span>[i,j,k]
                     <span style="color:#66d9ef">if</span> valid_trott(a):
-                        <span style="color:#66d9ef">print</span>(a)
+                        print(a)
 </code></pre></div><p>output:</p>
 <pre><code>[3]
 [3, 29]
@@ -356,7 +356,7 @@ True
     a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, prev <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> i)]
     prev <span style="color:#f92672">=</span> prev <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> i)
     <span style="color:#66d9ef">if</span> valid_trott(a):
-        <span style="color:#66d9ef">print</span>(a) <span style="color:#75715e"># print only the valid approximations</span>
+        print(a) <span style="color:#75715e"># print only the valid approximations</span>
 </code></pre></div><p>output:</p>
 <pre><code>[3, 329]
 [3, 3329]
@@ -382,7 +382,7 @@ True
 <p>backtracking is the best way to do a brute force for all permutations in a general case.</p>
 </blockquote>
 <p>Here we will take what we do in each of the for-loops in the code above and call this function recursively. I will set more limiting restrictions on this version as the above code actually does take a bit of time to run just for 3 items of in the range of <code>[1, 1000000]</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trott_backtracking</span>(current_cf, count, max_items, max_size, file<span style="color:#f92672">=</span>None):
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trott_backtracking</span>(current_cf, count, max_items, max_size, file<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
     <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&lt;</span> max_items:
         valid <span style="color:#f92672">=</span> []
         <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, max_size):
@@ -392,7 +392,7 @@ True
         <span style="color:#66d9ef">if</span> valid:
             <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> valid:
                 <span style="color:#75715e"># These branches are still alive</span>
-                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;VALID: {}&#34;</span><span style="color:#f92672">.</span>format(str(v)), file<span style="color:#f92672">=</span>file)
+                print(<span style="color:#e6db74">&#34;VALID: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(str(v)), file<span style="color:#f92672">=</span>file)
                 trott_backtracking(v, count<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, max_items, max_size, file<span style="color:#f92672">=</span>file)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output1.txt&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>) <span style="color:#66d9ef">as</span> out:
     trott_backtracking([], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">50</span>, out)

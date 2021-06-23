@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Programming Language Opinions | pry&#39;s blog</title>
+  <meta name="description" content="pry&#39;s blog!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Programming Language Opinions" />
+<meta property="og:description" content="Programming languages to hackers are tools and many craftspeople take great pride in their tools of choice. Tools often come with trade offs and the most skilled craftspeople know precisely when to use a tool and perhaps most importantly, when not to.
+ Each language has its purpose, however humble. Each language expresses the Yin and Yang of software. Each language has its place within the Tao.
+But do not program in COBOL if you can avoid it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.prydt.xyz/posts/programming-language-opinions/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-22T21:10:18-05:00" />
+<meta property="article:modified_time" content="2021-06-22T21:10:18-05:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Programming Language Opinions"/>
+<meta name="twitter:description" content="Programming languages to hackers are tools and many craftspeople take great pride in their tools of choice. Tools often come with trade offs and the most skilled craftspeople know precisely when to use a tool and perhaps most importantly, when not to.
+ Each language has its purpose, however humble. Each language expresses the Yin and Yang of software. Each language has its place within the Tao.
+But do not program in COBOL if you can avoid it."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://blog.prydt.xyz/css/style-classic.css">
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://blog.prydt.xyz/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://blog.prydt.xyz/posts/my-first-post/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&text=Programming%20Language%20Opinions" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&is_video=false&description=Programming%20Language%20Opinions" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Programming%20Language%20Opinions&body=Check out this article: https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&name=Programming%20Language%20Opinions&description=Programming%20languages%20to%20hackers%20are%20tools%20and%20many%20craftspeople%20take%20great%20pride%20in%20their%20tools%20of%20choice.%20Tools%20often%20come%20with%20trade%20offs%20and%20the%20most%20skilled%20craftspeople%20know%20precisely%20when%20to%20use%20a%20tool%20and%20perhaps%20most%20importantly%2c%20when%20not%20to.%0a%20Each%20language%20has%20its%20purpose%2c%20however%20humble.%20Each%20language%20expresses%20the%20Yin%20and%20Yang%20of%20software.%20Each%20language%20has%20its%20place%20within%20the%20Tao.%0aBut%20do%20not%20program%20in%20COBOL%20if%20you%20can%20avoid%20it." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&t=Programming%20Language%20Opinions" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#kotlin">Kotlin</a></li>
+    <li><a href="#c">C</a></li>
+    <li><a href="#c-1">C++</a></li>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#lua">Lua</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#c-2">C#</a></li>
+    <li><a href="#crystal">Crystal</a></li>
+    <li><a href="#the-end">The End</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Programming Language Opinions
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-06-22 21:10:18 -0500 CDT" itemprop="datePublished">2021-06-22</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/technology" rel="tag">technology</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/fun" rel="tag">fun</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>Programming languages to hackers are tools and many craftspeople take great pride in their tools of choice. Tools often come with trade offs and the most skilled craftspeople know precisely when to use a tool and perhaps most importantly, when not to.</p>
+<blockquote>
+<p>Each language has its purpose, however humble. Each language expresses the Yin and Yang of software. Each language has its place within the Tao.</p>
+<p>But do not program in COBOL if you can avoid it.</p>
+<p>&ndash; <a href="https://www.mit.edu/~xela/tao.html">The Tao of Programming</a></p>
+</blockquote>
+<p>That being said&hellip; here are some opinions on languages that I have used so far.</p>
+<h2 id="javascript">JavaScript</h2>
+<p>JavaScript was my first programming language (through the amazing and beautiful and wonderful Khan Academy). JavaScript is so incredibly useful now that it is <em>the</em> website programming language and I genuinely think that parts of the language are cool! The fact that JavaScript has first-class functions is great. Other than that, JS is pretty <a href="https://youtu.be/3se2-thqf-A?t=80">messy</a> and the ecosystem feels very low quality compared to other languages. NPM is a big source many of my problems with the JS ecosystem and the whole <a href="https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/">left-pad situation</a> really shows the overuse of libraries for simple things.</p>
+<p>Also, I have very mixed feelings about Node.js because it very much feels like overengineering. I looked at many lists of &ldquo;why should I use Node.js for my server&rdquo; and it seems like outside of being good for managing concurrent connections, its just a language that many are familiar with and they shoehorn it into being used on the server side.</p>
+<p>I use JavaScript for client-side code only and I use it only when necessary. I don&rsquo;t think JavaScript is inherently evil or even a bad programming language, I just believe that it is overused and this overuse has made many websites more bloated and slow. An example would be using a JS frontend framework like React.js or Vue.js for building a static site. Why???? Just use HTML + CSS and maaaaybe a little JS as a treat.</p>
+<h2 id="java">Java</h2>
+<p>Java is an interesting beast. Java feels like a more well-thought-out C++ but is too verbose and runs on a VM.</p>
+<p>I learned Java in middle school and even at that age I could tell that object oriented programming wasn&rsquo;t all it was hyped up to be.</p>
+<blockquote>
+<p>Object-oriented programming is an exceptionally bad idea which could only have originated in California.</p>
+<p>– Edsger Dijkstra</p>
+</blockquote>
+<p><code>System.out.println</code> is a perfect <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)">encapsulation</a> of how terribly verbose Java is. And speaking of encapsulation&hellip; It always felt like encapsulation makes sense in some cases but not in every case and it just leads to adding a getter and setter for every private variable.</p>
+<p>Learn Java if you want a soul-crushing code monkey job 🤩.</p>
+<h2 id="kotlin">Kotlin</h2>
+<p>Kotlin is better than Java in every way and the best thing about it is that it reduces the verbosity of code (features like data classes are awesome!). Even then, I don&rsquo;t really see a use for Kotlin outside of making Android apps.</p>
+<p>And honestly, even then making mobile apps sounds like such a pain without something like Flutter or React Native if you want to reach iOS users.</p>
+<p>ok ok back to programming languages&hellip;</p>
+<h2 id="c">C</h2>
+<p>C is one of my favorite languages. I love it because it is a simple language. That being said, it certainly isn&rsquo;t simple to program even the simplest of things in it. Working with strings in C is a nightmare. And while C does have incredible libraries for everything you could possible want, C doesn&rsquo;t have a singular package manager and instead depends on individual linux distro package managers. This makes it a pain to run if a library isn&rsquo;t packaged for your distro.</p>
+<p>Also, this is a minor point, but I would really love it if C had generics. I know that it would make the language more complex but generics are the one feature that I really miss when writing a data structure in C. Yes, I could write the whole data structure using <code>void*</code> but that incurs a <a href="https://attractivechaos.wordpress.com/2008/10/02/using-void-in-generic-c-programming-may-be-inefficient/">performance cost</a>. I could also write the entire data structure <a href="https://github.com/attractivechaos/klib#methodology">in a macro</a> and then use that to emulate gnerics but this feels like a hack without many of the niceties of generics.</p>
+<p>C is great if you are careful, patient, and are ok with writing many things yourself and only reaching to libraries as a last resort.</p>
+<h2 id="c-1">C++</h2>
+<p>I hate C++. There are parts that I like but overall the language just feels <em>too</em> complicated.</p>
+<blockquote>
+<p>Whenever the C++ language designers had two competing ideas as to how they should solve some problem, they said, “OK, we’ll do them both”. So the language is too baroque for my taste.</p>
+<p>– Donald E Knuth</p>
+</blockquote>
+<p>It does too many things half-well and other things poorly. It is very useful in AAA game development and in many applications but I strongly dislike how much of a lovecraftian amalgamation it is.</p>
+<p>C++ is a clear example of feature creep.</p>
+<h2 id="python">Python</h2>
+<p>Python is a wonderful language for getting things done. It is easily the programming language I am most productive in just because of how powerful the core data structures built-in to the language along with the &ldquo;batteries-included&rdquo; standard library. The <code>dict</code> and <code>list</code> types are so powerful! Working with XML or JSON or sqlite or gzip or LZMA or CSVs or &hellip;? Well they are all supported in the standard library. And I haven&rsquo;t even gotten to the incredible ecosystem of lirbaries made for python. <a href="https://numpy.org/">NumPy</a>, <a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>, and <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> make Python a joy to work with.</p>
+<p>Some people complain about the issue of the <a href="https://xkcd.com/1987/">Python Environment</a> and I&rsquo;m sure it was true in the past, but with the advent of <a href="https://docs.python.org/3/library/venv.html">venv</a>, I never have any issues with setting up Python.</p>
+<p>Python is my Swiss Army Knife when it comes to anything that I want to do quickly and easily. The downsides of Python to me is that it is quite large and wouldn&rsquo;t be a good fit for embedding into other programs as a scripting language and in general it is quite slow compared to complied languages.</p>
+<h2 id="lua">Lua</h2>
+<p>Lua feels like Python done right(tm). While the standard library and ecosystem aren&rsquo;t as vibrant or large, the language itself feels very well-designed and small. Lua is just an adorable language, easily embeddable which makes it the go to choice of many video games as a scripting language.</p>
+<p>The singular sin of Lua to me is the fact that it is 1-indexed. WHAT MONSTER WOULD DO SUCH A THING? To take such a beautiful language and introduce a singular syntactic slipup.</p>
+<p>Also, I just have to mention <a href="https://love2d.org/">Love2d</a> which is an amazing little framework to get starting making video games! I highly recommend it to everyone.</p>
+<p>All in all, Lua is an incredibly powerful and small scripting language which definitely has its uses.</p>
+<h2 id="php">PHP</h2>
+<p>PHP is a much hated language. And with good reason. It is a terrible language with a terrible standard library and terrible performance. It was so unscalable for Facebook, Facebook wrote their <a href="https://en.wikipedia.org/wiki/HipHop_for_PHP">own transpiler</a> and eventually a <a href="https://github.com/facebook/hhvm/">JIT VM</a> for it.</p>
+<p>And <a href="https://w3techs.com/technologies/details/pl-php">most of the known internet runs on PHP</a>. PHP is a reminder that the best technology does not always win out in the end and convenience plays a big factor in how popular something gets.</p>
+<p>Don&rsquo;t use PHP if you can avoid it.</p>
+<h2 id="c-2">C#</h2>
+<p>C# seems like Microsoft Java. To be fair to C#, it feels like a much better designed language than Java. One of my main criticisms would be that it is too tied to a singluar company but since Microsoft open-sourced .NET, this is less of an issue.</p>
+<h2 id="crystal">Crystal</h2>
+<p>Crystal is a language that I really want to succeed. The promise of &ldquo;Fast as C, Slick as Ruby&rdquo; is extremely compelling (even if I don&rsquo;t find Ruby that slick). Crystal is actually extremely fun to use. The language is exciting and fast and genuinely feels like an amazing combination of C and Python.</p>
+<p>I have always wanted a language like Python or Lua but as a compiled language and Crystal is an ongoing project to create something like that.</p>
+<p>The biggest issues with Crystal are that it has only <a href="https://crystal-lang.org/2021/03/22/crystal-1.0-what-to-expect.html">reached a 1.0 release recently</a>. Both the language and the ecosystem are young and while I hope it will grow into something amazing, I am not holding my breath because to my knowledge, there still isn&rsquo;t a major backer to the project. All the languages I have mentioned above are used by thousands of extremely large companies and many new languages are backed by a large organization like Rust with Mozilla or Go with Google and Crystal doesn&rsquo;t seem to be all that used yet.</p>
+<h2 id="the-end">The End</h2>
+<p>I am pragmatic about my use of languages and honestly, most criticism of a language that I have made here are due to expecting the wrong things from a language. You shouldn&rsquo;t expect a dynamically typed scripting language to be good at extremely fast computations and you shouldn&rsquo;t expect C to be ergonomic to use with JSON out of the box.</p>
+<p>I know this was quite rambly but I hope it gave even a little joy or insight into my views on these varying technologies. I hope to update this or write a sequel later once I learn many more languages like:</p>
+<ul>
+<li>Rust</li>
+<li>Elixir</li>
+<li>Scheme (and other lisps?)</li>
+<li>Haskell</li>
+<li>Verilog</li>
+<li>Go</li>
+<li>etc!</li>
+</ul>
+<p>&ndash; pry</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">All posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#kotlin">Kotlin</a></li>
+    <li><a href="#c">C</a></li>
+    <li><a href="#c-1">C++</a></li>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#lua">Lua</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#c-2">C#</a></li>
+    <li><a href="#crystal">Crystal</a></li>
+    <li><a href="#the-end">The End</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&text=Programming%20Language%20Opinions" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&is_video=false&description=Programming%20Language%20Opinions" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Programming%20Language%20Opinions&body=Check out this article: https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&title=Programming%20Language%20Opinions" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&name=Programming%20Language%20Opinions&description=Programming%20languages%20to%20hackers%20are%20tools%20and%20many%20craftspeople%20take%20great%20pride%20in%20their%20tools%20of%20choice.%20Tools%20often%20come%20with%20trade%20offs%20and%20the%20most%20skilled%20craftspeople%20know%20precisely%20when%20to%20use%20a%20tool%20and%20perhaps%20most%20importantly%2c%20when%20not%20to.%0a%20Each%20language%20has%20its%20purpose%2c%20however%20humble.%20Each%20language%20expresses%20the%20Yin%20and%20Yang%20of%20software.%20Each%20language%20has%20its%20place%20within%20the%20Tao.%0aBut%20do%20not%20program%20in%20COBOL%20if%20you%20can%20avoid%20it." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fprogramming-language-opinions%2f&t=Programming%20Language%20Opinions" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Pranoy Dutta 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>

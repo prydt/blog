@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:36:28 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 21:10:18 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming Language Opinions</title>
+      <link>https://blog.prydt.xyz/posts/programming-language-opinions/</link>
+      <pubDate>Tue, 22 Jun 2021 21:10:18 -0500</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/programming-language-opinions/</guid>
+      <description>Programming languages to hackers are tools and many craftspeople take great pride in their tools of choice. Tools often come with trade offs and the most skilled craftspeople know precisely when to use a tool and perhaps most importantly, when not to.
+ Each language has its purpose, however humble. Each language expresses the Yin and Yang of software. Each language has its place within the Tao.
+But do not program in COBOL if you can avoid it.</description>
+    </item>
+    
     <item>
       <title>Revamping my Blog!</title>
       <link>https://blog.prydt.xyz/posts/my-first-post/</link>
