@@ -213,8 +213,8 @@
 <h2 id="big-mathcalo">Big-\(\mathcal{O}\)</h2>
 <p>We use Big-\(\mathcal{O}\) to denote an asymptotic upper bound on a function i.e. a bound on the worst case. &ldquo;It can&rsquo;t get worse than this.&rdquo;</p>
 <p><img src="/can_always_get_worse.jpg" alt="That&rsquo;s one of the remarkable things about life. It&rsquo;s never so bad that it can&rsquo;t get worse."></p>
-<p>To better understand what this means, below is the formal definition of Big-\(\mathcal{O}\).</p>
-<p>\[ \mathcal{O}(g(n)) = \{f(n) \mid \exists \ c, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq f(n) \leq cg(n) \ \forall n \geq n_0 \} \]</p>
+<p>To better understand what this means, below is the formal definition of Big-\(\mathcal{O}\) for a given function \(g(n)\).</p>
+<p>\[ \mathcal{O}(g(n)) = \{f(n) \mid \exists \ c, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq f(n) \leq cg(n) \ \forall n \geq n_0 \} \]</p>
 <p>To put that into words, \(\mathcal{O}(g(n))\) is the set of all functions for which you can always find a positive integer \(c\) such that \(cg(n)\) is always greater than or equal to that function starting at a sufficiently large value \(n_0\).</p>
 <p>btw just as a quick aside, we always assume that \(T(n)\) is a function from positive integers to nonnegative real numbers. We also assume that \(T(n)\) is asymptotic positive, meaning that for a sufficiently large input, the output of \(T(n)\) will be positive.</p>
 <p><img src="/big_o.png" alt="big o graph"></p>
@@ -226,14 +226,14 @@
 <p><img src="/calvin_life_could_be_worse.jpg" alt="&ldquo;Life could be worse, Calvin.&rdquo; &ldquo;Life could be a lot better too!"">
 Big-\(\Omega\) says &ldquo;it can&rsquo;t be better than this.&rdquo;</p>
 <p>The formal definition of \(\Omega\) is the same as \(\mathcal{O}\) except with the order of \( cg(n) \) and \( f(n)\) switched.</p>
-<p>\[ \Omega(g(n)) = \{f(n) \mid \exists \ c, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq cg(n) \leq f(n) \ \forall n \geq n_0 \} \]</p>
+<p>\[ \Omega(g(n)) = \{f(n) \mid \exists \ c, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq cg(n) \leq f(n) \ \forall n \geq n_0 \} \]</p>
 <h2 id="big-theta">Big-\(\Theta\)</h2>
 <p>Big-\(\Theta\) is an asymptotically tight bound on a function. You can think of \(\Theta\) is the intersection between \(\mathcal{O}\) and \(\Omega\). Big-\(\Theta\) is both a lower bound and an upper bound.</p>
 <p>\[ \Theta(g(n)) = \mathcal{O}(g(n)) \cap \Omega(g(n)) \]</p>
 <p>Also, the following is true,</p>
 <p>\[h(n) \in \Theta(g(n)) \iff h(n) \in \mathcal{O}(g(n)) \ \mathrm{and} \ h(n) \in \Omega(g(n)) \mathrm{.} \]</p>
 <p>Finally, here is the definition in set builder notation and as you can probably guess, is a mix of the definitions of \(\mathcal{O}\) and \(\Omega\).</p>
-<p>\[ \Theta(g(n)) = \{f(n) \mid \exists \ c_1, c_2, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ \forall n \geq n_0 \} \]</p>
+<p>\[ \Theta(g(n)) = \{f(n) \mid \exists \ c_1, c_2, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ \forall n \geq n_0 \} \]</p>
 <p>The definition is essentially a &ldquo;sandwiching&rdquo; of \(f(n)\) between \( c_1g(n)\) and \( c_2g(n)\).</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Asymptotic complexity is an invaluable tool for computer scientists to describe and compare algorithms in a hardware-agnostic manner and I strongly believe that understanding the math behind it helps with understanding the concept intuitively. I hope this post helped explain the math behind asymptotic complexity in a clear way!</p>

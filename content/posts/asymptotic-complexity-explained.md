@@ -25,9 +25,9 @@ We use Big-\\(\mathcal{O}\\) to denote an asymptotic upper bound on a function i
 
 ![That's one of the remarkable things about life. It's never so bad that it can't get worse.](/can_always_get_worse.jpg)
 
-To better understand what this means, below is the formal definition of Big-\\(\mathcal{O}\\).
+To better understand what this means, below is the formal definition of Big-\\(\mathcal{O}\\) for a given function \\(g(n)\\).
 
-\\[ \mathcal{O}(g(n)) = \\{f(n) \mid \exists \ c, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq f(n) \leq cg(n) \ \forall n \geq n_0 \\} \\]
+\\[ \mathcal{O}(g(n)) = \\{f(n) \mid \exists \ c, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq f(n) \leq cg(n) \ \forall n \geq n_0 \\} \\]
 
 To put that into words, \\(\mathcal{O}(g(n))\\) is the set of all functions for which you can always find a positive integer \\(c\\) such that \\(cg(n)\\) is always greater than or equal to that function starting at a sufficiently large value \\(n_0\\).
 
@@ -52,7 +52,7 @@ Big-\\(\Omega\\) says "it can't be better than this."
 
 The formal definition of \\(\Omega\\) is the same as \\(\mathcal{O}\\) except with the order of \\( cg(n) \\) and \\( f(n)\\) switched.
 
-\\[ \Omega(g(n)) = \\{f(n) \mid \exists \ c, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq cg(n) \leq f(n) \ \forall n \geq n_0 \\} \\]
+\\[ \Omega(g(n)) = \\{f(n) \mid \exists \ c, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq cg(n) \leq f(n) \ \forall n \geq n_0 \\} \\]
 
 ## Big-\\(\Theta\\)
 
@@ -66,7 +66,7 @@ Also, the following is true,
 
 Finally, here is the definition in set builder notation and as you can probably guess, is a mix of the definitions of \\(\mathcal{O}\\) and \\(\Omega\\).
 
-\\[ \Theta(g(n)) = \\{f(n) \mid \exists \ c_1, c_2, n_0 \in \mathbb{Z^+} \ \mathrm{s.t.} \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ \forall n \geq n_0 \\} \\]
+\\[ \Theta(g(n)) = \\{f(n) \mid \exists \ c_1, c_2, n_0 \in \mathbb{R^+} \ \mathrm{s.t.} \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ \forall n \geq n_0 \\} \\]
 
 The definition is essentially a "sandwiching" of \\(f(n)\\) between \\( c_1g(n)\\) and \\( c_2g(n)\\).
 
