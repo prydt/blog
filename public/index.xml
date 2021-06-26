@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Tue, 22 Jun 2021 21:10:18 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 22:47:43 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asymptotic Complexity Explained</title>
+      <link>https://blog.prydt.xyz/posts/asymptotic-complexity-explained/</link>
+      <pubDate>Fri, 25 Jun 2021 22:47:43 -0500</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/asymptotic-complexity-explained/</guid>
+      <description>“Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.”
+&amp;ndash; Edsger W. Dijkstra
+ Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of CLRS.</description>
+    </item>
+    
     <item>
       <title>Programming Language Opinions</title>
       <link>https://blog.prydt.xyz/posts/programming-language-opinions/</link>
