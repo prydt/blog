@@ -11,7 +11,7 @@
   <meta property="og:title" content="Asymptotic Complexity Explained" />
 <meta property="og:description" content="“Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.”
 &ndash; Edsger W. Dijkstra
- Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of CLRS." />
+ Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. This post is meant for someone who has heard of Big-O but doesn&rsquo;t know exactly what it means." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.prydt.xyz/posts/asymptotic-complexity-explained/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-25T22:47:43-05:00" />
@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="Asymptotic Complexity Explained"/>
 <meta name="twitter:description" content="“Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.”
 &ndash; Edsger W. Dijkstra
- Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of CLRS."/>
+ Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. This post is meant for someone who has heard of Big-O but doesn&rsquo;t know exactly what it means."/>
 
   
   
@@ -146,7 +146,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fasymptotic-complexity-explained%2f&name=Asymptotic%20Complexity%20Explained&description=%e2%80%9cSimplicity%20is%20a%20great%20virtue%20but%20it%20requires%20hard%20work%20to%20achieve%20it%20and%20education%20to%20appreciate%20it.%20And%20to%20make%20matters%20worse%3a%20complexity%20sells%20better.%e2%80%9d%0a%26ndash%3b%20Edsger%20W.%20Dijkstra%0a%20Ever%20wondered%20what%20asymptotic%20complexity%20or%20Big-%5c%28%5cmathcal%7bO%7d%5c%29%20notation%20are%20or%20what%20they%20mean%20mathematically%3f%20This%20post%20will%20explain%20asymptotic%20complexity%20without%20handwaving%20as%20much%20of%20the%20math.%20If%20you%20want%20an%20even%20deeper%20more%20rigorious%20look%20at%20this%20subject%2c%20I%20recommend%20reading%20chapter%203%20of%20CLRS." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fasymptotic-complexity-explained%2f&name=Asymptotic%20Complexity%20Explained&description=%e2%80%9cSimplicity%20is%20a%20great%20virtue%20but%20it%20requires%20hard%20work%20to%20achieve%20it%20and%20education%20to%20appreciate%20it.%20And%20to%20make%20matters%20worse%3a%20complexity%20sells%20better.%e2%80%9d%0a%26ndash%3b%20Edsger%20W.%20Dijkstra%0a%20Ever%20wondered%20what%20asymptotic%20complexity%20or%20Big-%5c%28%5cmathcal%7bO%7d%5c%29%20notation%20are%20or%20what%20they%20mean%20mathematically%3f%20This%20post%20will%20explain%20asymptotic%20complexity%20without%20handwaving%20as%20much%20of%20the%20math.%20This%20post%20is%20meant%20for%20someone%20who%20has%20heard%20of%20Big-O%20but%20doesn%26rsquo%3bt%20know%20exactly%20what%20it%20means." aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -205,11 +205,11 @@
 <p>“Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.”</p>
 <p>&ndash; Edsger W. Dijkstra</p>
 </blockquote>
-<p>Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of <a href="https://en.wikipedia.org/wiki/Introduction_to_Algorithms">CLRS</a>.</p>
+<p>Ever wondered what asymptotic complexity or Big-\(\mathcal{O}\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. This post is meant for someone who has heard of Big-O but doesn&rsquo;t know exactly what it means. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of <a href="https://en.wikipedia.org/wiki/Introduction_to_Algorithms">CLRS</a>.</p>
 <p>Let’s start with <a href="https://en.wikipedia.org/wiki/Computational_complexity">computational complexity</a>. The computational complexity of an algorithm is a measure of the resources the algorithm needs to run. These resources are typically significant considerations to the real world application of the algorithm such as the running time and space in memory used by the algorithm.</p>
-<p>We can think of the time complexity of an algorithm being a function \( T(n) \) where \(n\) is the size of the input to the algorithm. The <strong>asymptotic complexity</strong> of \( T(n) \) is a way we describe the behavior of the function&rsquo;s complexity for larger and larger input sizes (how it behaves closer to the asymptote.</p>
+<p>We can think of the time complexity of an algorithm being a function \( T(n) \) where \(n\) is the size of the input to the algorithm. The <strong>asymptotic complexity</strong> of \( T(n) \) is a way we describe the behavior of the function&rsquo;s complexity for larger and larger input sizes (how it behaves closer to the asymptote).</p>
 <p>To describe asymptotic complexity, we use <a href="https://xlinux.nist.gov/dads/HTML/bigOnotation.html">Big-\(\mathcal{O}\) notation</a> which allows us to talk precisely about the limiting behavior of a function. This &ldquo;limiting behavior&rdquo; is how the function behaves as \(n\) approaches \( \infty \).</p>
-<p>I&rsquo;ll quickly describe Big-\(\mathcal{O}\), Big-\(\Omega\), and Big-\(\Theta\) but there are lots of other notations that exist like little-o or little-\(\omega\) which are better described in a rigorious algorithms textbook.</p>
+<p>I&rsquo;ll quickly describe Big-\(\mathcal{O}\), Big-\(\Omega\), and Big-\(\Theta\) but there are lots of other notations that exist like little-o or little-\(\omega\) which is out of the scope of this post.</p>
 <h2 id="big-mathcalo">Big-\(\mathcal{O}\)</h2>
 <p>We use Big-\(\mathcal{O}\) to denote an asymptotic upper bound on a function i.e. a bound on the worst case. &ldquo;It can&rsquo;t get worse than this.&rdquo;</p>
 <p><img src="/can_always_get_worse.jpg" alt="That&rsquo;s one of the remarkable things about life. It&rsquo;s never so bad that it can&rsquo;t get worse."></p>
@@ -321,7 +321,7 @@ Big-\(\Omega\) says &ldquo;it can&rsquo;t be better than this.&rdquo;</p>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fasymptotic-complexity-explained%2f&name=Asymptotic%20Complexity%20Explained&description=%e2%80%9cSimplicity%20is%20a%20great%20virtue%20but%20it%20requires%20hard%20work%20to%20achieve%20it%20and%20education%20to%20appreciate%20it.%20And%20to%20make%20matters%20worse%3a%20complexity%20sells%20better.%e2%80%9d%0a%26ndash%3b%20Edsger%20W.%20Dijkstra%0a%20Ever%20wondered%20what%20asymptotic%20complexity%20or%20Big-%5c%28%5cmathcal%7bO%7d%5c%29%20notation%20are%20or%20what%20they%20mean%20mathematically%3f%20This%20post%20will%20explain%20asymptotic%20complexity%20without%20handwaving%20as%20much%20of%20the%20math.%20If%20you%20want%20an%20even%20deeper%20more%20rigorious%20look%20at%20this%20subject%2c%20I%20recommend%20reading%20chapter%203%20of%20CLRS." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fasymptotic-complexity-explained%2f&name=Asymptotic%20Complexity%20Explained&description=%e2%80%9cSimplicity%20is%20a%20great%20virtue%20but%20it%20requires%20hard%20work%20to%20achieve%20it%20and%20education%20to%20appreciate%20it.%20And%20to%20make%20matters%20worse%3a%20complexity%20sells%20better.%e2%80%9d%0a%26ndash%3b%20Edsger%20W.%20Dijkstra%0a%20Ever%20wondered%20what%20asymptotic%20complexity%20or%20Big-%5c%28%5cmathcal%7bO%7d%5c%29%20notation%20are%20or%20what%20they%20mean%20mathematically%3f%20This%20post%20will%20explain%20asymptotic%20complexity%20without%20handwaving%20as%20much%20of%20the%20math.%20This%20post%20is%20meant%20for%20someone%20who%20has%20heard%20of%20Big-O%20but%20doesn%26rsquo%3bt%20know%20exactly%20what%20it%20means." aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>

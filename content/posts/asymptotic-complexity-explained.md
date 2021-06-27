@@ -9,15 +9,15 @@ katex: true
 >
 > -- Edsger W. Dijkstra
 
-Ever wondered what asymptotic complexity or Big-\\(\mathcal{O}\\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of [CLRS](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
+Ever wondered what asymptotic complexity or Big-\\(\mathcal{O}\\) notation are or what they mean mathematically? This post will explain asymptotic complexity without handwaving as much of the math. This post is meant for someone who has heard of Big-O but doesn't know exactly what it means. If you want an even deeper more rigorious look at this subject, I recommend reading chapter 3 of [CLRS](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
 
 Let’s start with [computational complexity](https://en.wikipedia.org/wiki/Computational_complexity). The computational complexity of an algorithm is a measure of the resources the algorithm needs to run. These resources are typically significant considerations to the real world application of the algorithm such as the running time and space in memory used by the algorithm.
 
-We can think of the time complexity of an algorithm being a function \\( T(n) \\) where \\(n\\) is the size of the input to the algorithm. The **asymptotic complexity** of \\( T(n) \\) is a way we describe the behavior of the function's complexity for larger and larger input sizes (how it behaves closer to the asymptote.
+We can think of the time complexity of an algorithm being a function \\( T(n) \\) where \\(n\\) is the size of the input to the algorithm. The **asymptotic complexity** of \\( T(n) \\) is a way we describe the behavior of the function's complexity for larger and larger input sizes (how it behaves closer to the asymptote).
 
 To describe asymptotic complexity, we use [Big-\\(\mathcal{O}\\) notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html) which allows us to talk precisely about the limiting behavior of a function. This "limiting behavior" is how the function behaves as \\(n\\) approaches \\( \infty \\).
 
-I'll quickly describe Big-\\(\mathcal{O}\\), Big-\\(\Omega\\), and Big-\\(\Theta\\) but there are lots of other notations that exist like little-o or little-\\(\omega\\) which are better described in a rigorious algorithms textbook.
+I'll quickly describe Big-\\(\mathcal{O}\\), Big-\\(\Omega\\), and Big-\\(\Theta\\) but there are lots of other notations that exist like little-o or little-\\(\omega\\) which is out of the scope of this post.
 
 ## Big-\\(\mathcal{O}\\)
 
