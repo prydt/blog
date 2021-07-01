@@ -35,7 +35,7 @@ btw just as a quick aside, we always assume that \\(T(n)\\) is a function from p
 
 ![big o graph](/big_o.png)
 
-This is easier to see visually and through example. Take the above graph. The blue line represents the running time function \\(h(n) = x^3-2x+2\\). The function \\(h(n)\\) is in the set \\(O(n^3)\\) because if we pick \\(c=3\\) and start at \\(n_0 \approx 0.68233\\) (the gray line) then \\( cn^3 \geq h(n) \\) for all \\( n \geq n_0 \\) which implies that \\( h(n) \in O(n^3) \\) by the definition of Big-\\(\mathcal{O}\\).
+This is easier to see visually and through example. Take the above graph. The blue line represents the running time function \\(h(n) = x^3-2x+2\\). The function \\(h(n)\\) is in the set \\(\mathcal{O}(n^3)\\) because if we pick \\(c=3\\) and start at \\(n_0 \approx 0.68233\\) (the gray line) then \\( cn^3 \geq h(n) \\) for all \\( n \geq n_0 \\) which implies that \\( h(n) \in \mathcal{O}(n^3) \\) by the definition of Big-\\(\mathcal{O}\\).
 
 Another quick aside, computer scientists often will write the last statement as \\( h(n)=\mathcal{O}(n^3)\\). This is an abuse of notation that I will use as well and that you will see frequently, but just remember that it *is* an abuse of notation and that the equal sign as it is used here is asymmetric (i.e. \\( \mathcal{O}(n^3) \ne h(n)\\)). It is useful to read the statement as just "\\(h(n)\\) is in \\(\mathcal{O}(n^3)\\)."
 
