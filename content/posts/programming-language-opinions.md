@@ -76,7 +76,7 @@ Python is my Swiss Army Knife when it comes to anything that I want to do quickl
 
 Lua feels like Python done right(tm). While the standard library and ecosystem aren't as vibrant or large, the language itself feels very well-designed and small. Lua is just an adorable language, easily embeddable which makes it the go to choice of many video games as a scripting language.
 
-The singular sin of Lua to me is the fact that it is 1-indexed. WHAT MONSTER WOULD DO SUCH A THING? To take such a beautiful language and introduce a singular syntactic slipup.
+The singular sin of Lua to me is the fact that it is 1-indexed. WHAT MONSTER WOULD DO SUCH A THING? To take such a beautiful language and introduce a singular syntactic slipup. Most programming languages are 0-indexed and [with good reason too](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html).
 
 Also, I just have to mention [Love2d](https://love2d.org/) which is an amazing little framework to get starting making video games! I highly recommend it to everyone.
 
