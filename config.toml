@@ -8,14 +8,15 @@ copyright = "Pranoy Dutta"
 name = "Pranoy Dutta"
 
 [params]
-colortheme = "classic"
-description = "pry's blog!"
+colortheme = "white"
+description = "A place for my thoughts online. Sapere aude."
 mainSection = "posts"
 showAllPostsOnHomePage = true
 postsOnHomePage = 5
 tagsOverview = true
 rss = true
-mathjax = true
+logo = "https://prydt.xyz/dorothy_pfp.jpg"
+# mathjax = true
 # showProjectsList = true
 # projectsUrl = "https://github.com/prydt"
 
@@ -45,4 +46,4 @@ weight = 4
 
 [[params.social]]
   name = "email"
-  link = "pranoydll@gmail.com" # no need for "mailto:" at the start
+  link = "pranoy@utexas.edu" # no need for "mailto:" at the start
