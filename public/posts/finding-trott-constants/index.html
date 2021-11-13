@@ -226,7 +226,7 @@
 <p>Additionally, note that our CF representation will just be a simple list of numbers. We will not store the zero as the beginning number does not really matter in either representation.</p>
 <h3 id="count-digits">Count Digits</h3>
 <p>This is used to count the number of digits in our CF representation which will allow us to figure out how many decimal places to check for equivalence.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> mpmath <span style="color:#f92672">import</span> mp, mpf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> mpmath <span style="color:#f92672">import</span> mp, mpf
 
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_digits</span>(cf_list):
@@ -239,21 +239,21 @@
             total <span style="color:#f92672">=</span> total <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">return</span> total
 </code></pre></div><p>We shall test the our count digits function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">99</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">99</span>]
 print(count_digits(a))
 print(a)
 </code></pre></div><p>output:</p>
-<pre><code class="language-commandline" data-lang="commandline">7
+<pre tabindex="0"><code class="language-commandline" data-lang="commandline">7
 [100, 5, 7, 99]
 </code></pre><h2 id="continued-fraction-to-real-number-conversion">Continued Fraction to Real Number conversion</h2>
 <p>Here we perform the conversion from CF to real number via repeated divisions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cf_to_real</span>(cf_list, precision):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cf_to_real</span>(cf_list, precision):
     <span style="color:#66d9ef">with</span> mp<span style="color:#f92672">.</span>extradps(precision<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
         curr <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># 0 is previous term</span>
         <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> cf_list[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]: <span style="color:#75715e"># loop through list backwards</span>
             curr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> mpf(item <span style="color:#f92672">+</span> curr)
         <span style="color:#66d9ef">return</span> curr
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cf <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>]
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cf <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>]
 
 cf_to_real(cf, count_digits(cf) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 </code></pre></div><p>output:</p>
@@ -261,16 +261,16 @@ cf_to_real(cf, count_digits(cf) <span style="color:#f92672">+</span> <span style
 </code></pre>
 <h2 id="continued-fraction-to-expected-trott-constant-approximation">Continued Fraction to Expected Trott Constant approximation</h2>
 <p>Here we are calculating what the real number needs to equal if this CF is a trott constant approximate.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cf_to_trott_approx</span>(cf_list):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cf_to_trott_approx</span>(cf_list):
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0.</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(map(str,cf_list)))
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cf <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>]
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cf <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>]
 cf_to_trott_approx(cf)
 </code></pre></div><p>output:</p>
 <pre><code>'0.32957'
 </code></pre>
 <h2 id="check-if-cf-form-has-equal-real-and-expected-values">Check if CF form has equal real and expected values</h2>
 <p>Here we are checking if the real number representation of the CF matches the digits in the terms of the CF.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">valid_trott</span>(cf_list):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">valid_trott</span>(cf_list):
     precision <span style="color:#f92672">=</span> count_digits(cf_list) <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
     <span style="color:#66d9ef">with</span> mp<span style="color:#f92672">.</span>extradps(precision<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
         real <span style="color:#f92672">=</span> str(cf_to_real(cf_list, precision))[:precision]
@@ -278,7 +278,7 @@ cf_to_trott_approx(cf)
         <span style="color:#75715e"># print(&#34;{} {}&#34;.format(real, want)) # for debugging</span>
         <span style="color:#66d9ef">return</span> real <span style="color:#f92672">==</span> want
 </code></pre></div><p>Testing the <code>valid_trott</code> function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>])) <span style="color:#75715e"># true</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>])) <span style="color:#75715e"># true</span>
 print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>])) <span style="color:#75715e"># false</span>
 print(valid_trott([<span style="color:#ae81ff">3</span>])) <span style="color:#75715e"># true</span>
 print(valid_trott([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">30</span>])) <span style="color:#75715e"># false</span>
@@ -298,7 +298,7 @@ True
 </code></pre>
 <h2 id="testing-for-any-possible-pre-trott-constant-3-terms-long">Testing for any possible Pre Trott constant 3 terms long</h2>
 <p>This is the general structure of what we wish to do to check if there are n-item long valid trott constants. However doing this many nested for-loops gets tedious and it is actually not possible to general to an nth degree so we must use a recursive technique known as backtracking.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ITEM_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ITEM_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>
 
 <span style="color:#75715e"># for-loop solution (NOT backtracking)</span>
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, ITEM_MAX):
@@ -353,7 +353,7 @@ True
 </code></pre>
 <p>Here we can see that the first term must be a 3 to continue, 10 works at first but immediately dies out. The second term also is quite interesting as it looks like it must be 29, 329, 3329, and so on.</p>
 <p>This is already a useful result in that we can generalize and say that we can find a pre trott constant that is equal up to any N. (If we wanted a pre trott that is equal to 20 digits we could just have <code>[0; 3, 333333333333333329]</code>.)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">prev <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">prev <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> 
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">20</span>):
     a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, prev <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> i)]
     prev <span style="color:#f92672">=</span> prev <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> i)
@@ -384,7 +384,7 @@ True
 <p>backtracking is the best way to do a brute force for all permutations in a general case.</p>
 </blockquote>
 <p>Here we will take what we do in each of the for-loops in the code above and call this function recursively. I will set more limiting restrictions on this version as the above code actually does take a bit of time to run just for 3 items of in the range of <code>[1, 1000000]</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trott_backtracking</span>(current_cf, count, max_items, max_size, file<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trott_backtracking</span>(current_cf, count, max_items, max_size, file<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
     <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&lt;</span> max_items:
         valid <span style="color:#f92672">=</span> []
         <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, max_size):
@@ -396,11 +396,11 @@ True
                 <span style="color:#75715e"># These branches are still alive</span>
                 print(<span style="color:#e6db74">&#34;VALID: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(str(v)), file<span style="color:#f92672">=</span>file)
                 trott_backtracking(v, count<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, max_items, max_size, file<span style="color:#f92672">=</span>file)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output1.txt&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>) <span style="color:#66d9ef">as</span> out:
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output1.txt&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>) <span style="color:#66d9ef">as</span> out:
     trott_backtracking([], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">50</span>, out)
 </code></pre></div><p>Since the output was long I moved it to another file but it can be seen in <code>output1.txt</code>.</p>
 <p>Now I just need to run this for much larger possible values.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output3.txt&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>) <span style="color:#66d9ef">as</span> out:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output3.txt&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>) <span style="color:#66d9ef">as</span> out:
     trott_backtracking([], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">10000</span>, out)
 </code></pre></div><h2 id="todo">TODO</h2>
 <p>There are a few improvements I want to add to the code soon. Currently it is only using one process and hence only one of my CPU cores.</p>
@@ -413,11 +413,14 @@ True
     </div>
   </article>
 
-  
-  
-
-
-
+  <script src="https://utteranc.es/client.js"
+        repo="prydt/blog"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
   <div id="footer-post-container">

@@ -195,54 +195,57 @@
 <ul>
 <li>Device Tree Compiler</li>
 </ul>
-<pre><code class="language-commandline" data-lang="commandline"># Arch Linux
+<pre tabindex="0"><code class="language-commandline" data-lang="commandline"># Arch Linux
 sudo pacman -S dtc
 
 # Ubuntu / Debian
 sudo apt install device-tree-compiler
 </code></pre><p>Installing Spike</p>
 <p>Make a new directory for Spike</p>
-<pre><code>mkdir RISCV
+<pre tabindex="0"><code>mkdir RISCV
 cd RISCV
 </code></pre><p>Clone the repos for the RISCV GNU toolchain, proxy kernel (pk), and Spike itself</p>
-<pre><code>git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+<pre tabindex="0"><code>git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 git clone https://github.com/riscv/riscv-pk
 git clone https://github.com/riscv/riscv-isa-sim
 </code></pre><p>Set environment variables (preferably move these commands into bashrc, zshrc, or something similar)</p>
-<pre><code>export RISCV=/path/from/home/to/RISCV
+<pre tabindex="0"><code>export RISCV=/path/from/home/to/RISCV
 export PATH=$PATH:$RISCV/bin
 </code></pre><p>Build the toolchain (this will take a while so make some tea or something)</p>
-<pre><code>cd riscv-gnu-toolchain
+<pre tabindex="0"><code>cd riscv-gnu-toolchain
 mkdir build
 cd build
 ../configure --prefix=$RISCV --with-arch=rv32i
 make
 </code></pre><p>Now, to build the Proxy Kernel</p>
-<pre><code>cd ../riscv-pk
+<pre tabindex="0"><code>cd ../riscv-pk
 mkdir build
 cd build
 ../configure --prefix=$RISCV --host=riscv32-unknown-elf
 make
 make install
 </code></pre><p>Finally to build Spike</p>
-<pre><code>cd ../riscv-isa-sim
+<pre tabindex="0"><code>cd ../riscv-isa-sim
 mkdir build
 cd build
 ../configure --prefix=$RISCV --enable-histogram
 make
 make install
 </code></pre><p>You are done!! To test if your install is working correctly use the following:</p>
-<pre><code>riscv32-unknown-elf-gcc helloworld.c # where helloworld.c is any C program
+<pre tabindex="0"><code>riscv32-unknown-elf-gcc helloworld.c # where helloworld.c is any C program
 RISCV/riscv-isa-sim/build/spike --isa=RV32IMAC RISCV/riscv-pk/build/pk a.out
 </code></pre>
     </div>
   </article>
 
-  
-  
-
-
-
+  <script src="https://utteranc.es/client.js"
+        repo="prydt/blog"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
   <div id="footer-post-container">
