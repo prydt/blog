@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Fri, 25 Jun 2021 22:47:43 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Nov 2021 16:19:48 -0600</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kotlin for Data Structures Practice</title>
+      <link>https://blog.prydt.xyz/posts/kotlin-for-data-structures-practice/</link>
+      <pubDate>Tue, 16 Nov 2021 16:19:48 -0600</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/kotlin-for-data-structures-practice/</guid>
+      <description>or Why Kotlin? The main difference between a computer scientist and a programmer is similar to the difference between an artist and a painter. A programmer merely writes programs, while a computer scientist creates art. This art is a subjective matter but I do find that each programmer has their own taste and one particular axis by which I measure the beauty of code is whether it uses the right abstractions and whether it is efficient without being sloppy.</description>
+    </item>
+    
     <item>
       <title>Asymptotic Complexity Explained</title>
       <link>https://blog.prydt.xyz/posts/asymptotic-complexity-explained/</link>
