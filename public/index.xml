@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Tue, 16 Nov 2021 16:19:48 -0600</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Dec 2021 16:06:56 -0600</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You Can&#39;t Trust Closed Source Software</title>
+      <link>https://blog.prydt.xyz/posts/you-cant-trust-closed-source-sw/</link>
+      <pubDate>Sat, 18 Dec 2021 16:06:56 -0600</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/you-cant-trust-closed-source-sw/</guid>
+      <description>Open source software, Free software, whatever you want to call it, is often better than its proprietary counterparts when security, privacy, and performance are being considered. The primary downsides of using open source software is that it is often less immediately accessible and the UIs lack polish. (This is why we need more designers, artists, and other non-programmers in the open source world!)
+But one benefit of open source software that I&amp;rsquo;ve seen overlooked by many is that open source software is more verifiably private.</description>
+    </item>
+    
     <item>
       <title>Kotlin for Data Structures Practice</title>
       <link>https://blog.prydt.xyz/posts/kotlin-for-data-structures-practice/</link>
