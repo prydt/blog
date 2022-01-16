@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>books on pry&#39;s blog</title>
-    <link>https://blog.prydt.xyz/tags/books/</link>
-    <description>Recent content in books on pry&#39;s blog</description>
+    <title>music on pry&#39;s blog</title>
+    <link>https://blog.prydt.xyz/tags/music/</link>
+    <description>Recent content in music on pry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.prydt.xyz/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.prydt.xyz/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021 in Review</title>
       <link>https://blog.prydt.xyz/posts/2021-in-review/</link>
@@ -16,15 +16,6 @@
       <guid>https://blog.prydt.xyz/posts/2021-in-review/</guid>
       <description>2021 was a wild year. Year two of our global pandemic. Like all years in recent memory, so much happened. January 6th, Among Us, Myanmar, Ever Given, Squid Game, NASA&amp;rsquo;s Ingenuity, Dune, James Webb Space Telescope.
 For me, it was a year of transition. I spent my entire high school senior year online and was itching to go in person to university knowing all of the risks. Even with all the changes, I had a great time during my first semester at UT and have come to love Austin as a city.</description>
-    </item>
-    
-    <item>
-      <title>Breakfast of Champions Review</title>
-      <link>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</link>
-      <pubDate>Sun, 12 Jul 2020 15:49:53 -0500</pubDate>
-      
-      <guid>https://blog.prydt.xyz/posts/breakfast-of-champions-review/</guid>
-      <description>An interesting novel on race and conflict in America still relevant today.</description>
     </item>
     
   </channel>

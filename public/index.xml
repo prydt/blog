@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Sat, 18 Dec 2021 16:06:56 -0600</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 in Review</title>
+      <link>https://blog.prydt.xyz/posts/2021-in-review/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/2021-in-review/</guid>
+      <description>2021 was a wild year. Year two of our global pandemic. Like all years in recent memory, so much happened. January 6th, Among Us, Myanmar, Ever Given, Squid Game, NASA&amp;rsquo;s Ingenuity, Dune, James Webb Space Telescope.
+For me, it was a year of transition. I spent my entire high school senior year online and was itching to go in person to university knowing all of the risks. Even with all the changes, I had a great time during my first semester at UT and have come to love Austin as a city.</description>
+    </item>
+    
     <item>
       <title>You Can&#39;t Trust Closed Source Software</title>
       <link>https://blog.prydt.xyz/posts/you-cant-trust-closed-source-sw/</link>
