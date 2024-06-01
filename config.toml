@@ -20,6 +20,12 @@ logo = "https://prydt.xyz/dorothy_pfp.jpg"
 # showProjectsList = true
 # projectsUrl = "https://github.com/prydt"
 
+[markup]
+  [markup.highlight]
+    #codeFences = false
+    style = "xcode"
+    lineNos = true
+
 [[menu.main]]
 name = "Home"
 url = "/"

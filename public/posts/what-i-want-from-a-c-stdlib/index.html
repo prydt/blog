@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> What I Want From a C stdlib | pry&#39;s blog</title>
+  <meta name="description" content="A place for my thoughts online. Sapere aude.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="What I Want From a C stdlib" />
+<meta property="og:description" content="or what I always end up needing in C
+ Hi! I haven&rsquo;t blogged in a while but over this summer I plan to change that. I&rsquo;ll just be writing about random things on my mind. I&rsquo;ve been writing more C lately so I think I&rsquo;ll do what is a rite of passage for systems programmers: complain about C and rant that my specific needs would be better met with yet another standard library replacement." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.prydt.xyz/posts/what-i-want-from-a-c-stdlib/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-01T00:26:01-05:00" />
+<meta property="article:modified_time" content="2024-06-01T00:26:01-05:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What I Want From a C stdlib"/>
+<meta name="twitter:description" content="or what I always end up needing in C
+ Hi! I haven&rsquo;t blogged in a while but over this summer I plan to change that. I&rsquo;ll just be writing about random things on my mind. I&rsquo;ve been writing more C lately so I think I&rsquo;ll do what is a rite of passage for systems programmers: complain about C and rant that my specific needs would be better met with yet another standard library replacement."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://blog.prydt.xyz/css/style-white.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://blog.prydt.xyz/images/favicon.ico" />
+
+  
+  
+  
+  
+  
+
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://blog.prydt.xyz/posts/2021-in-review/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&text=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&is_video=false&description=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=What%20I%20Want%20From%20a%20C%20stdlib&body=Check out this article: https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&name=What%20I%20Want%20From%20a%20C%20stdlib&description=or%20what%20I%20always%20end%20up%20needing%20in%20C%0a%20Hi%21%20I%20haven%26rsquo%3bt%20blogged%20in%20a%20while%20but%20over%20this%20summer%20I%20plan%20to%20change%20that.%20I%26rsquo%3bll%20just%20be%20writing%20about%20random%20things%20on%20my%20mind.%20I%26rsquo%3bve%20been%20writing%20more%20C%20lately%20so%20I%20think%20I%26rsquo%3bll%20do%20what%20is%20a%20rite%20of%20passage%20for%20systems%20programmers%3a%20complain%20about%20C%20and%20rant%20that%20my%20specific%20needs%20would%20be%20better%20met%20with%20yet%20another%20standard%20library%20replacement." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&t=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        What I Want From a C stdlib
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2024-06-01 00:26:01 -0500 CDT" itemprop="datePublished">2024-06-01</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <blockquote>
+<p>or what I always end up needing in C</p>
+</blockquote>
+<p>Hi! I haven&rsquo;t blogged in a while but over this summer I plan to change that. I&rsquo;ll just be writing about random things on my mind. I&rsquo;ve been writing more C lately so I think I&rsquo;ll do what is a rite of passage for systems programmers: complain about C and rant that my specific needs would be better met with yet another standard library replacement. So here goes&hellip;</p>
+<h1 id="motivation">Motivation</h1>
+<p>There are several schools of thought when it comes to standard libraries (stdlibs). Python famously has the <a href="https://docs.python.org/3/tutorial/stdlib.html#batteries-included">&ldquo;batteries included&rdquo; philosophy</a>, where pretty much anything useful is shoved into the stdlib. C is on the opposite end where very little is included. This makes sense, both historically and when you consider C&rsquo;s goals. C needs to be portable. C can&rsquo;t make many assumptions about the underlying hardware. C needs to be simple (for a given value of simple).</p>
+<p>When adding something to the standard library, the standards authors are understandably conservative. But because of this, the relative dearth of its stdlib, and the many reasons that it is still very desirable to write C, every C project of any considerable size reimplements many of the same things and many C programmers end up having their own little collection of libraries.</p>
+<p>This is my attempt to codify what I would like from an initial version of my own sort of stdlib for my needs.</p>
+<h1 id="basic-collections">Basic Collections</h1>
+<ul>
+<li>Map</li>
+<li>Sorted Maps</li>
+<li>Dynamic Arrays</li>
+</ul>
+<p>These are probably the biggest exclusions in my view. Pretty much every program I want to write ends up needing a hashtable or a dynamic array somewhere. And implementing a simple hashtable or growable array isn&rsquo;t even thaaat difficult but it&rsquo;s a pain.</p>
+<p>A common argument against why a hashtable shouldn&rsquo;t be included in the standard library is that there is no &ldquo;one size fits all&rdquo; hashtable. When you create a custom data structure for your problem, you are able to exploit information about your problem domain that library authors simply do not have access to. But this is not a terribly convincing argument to me. Why not provide a hashtable which has perfectly reasonable performance? There is no such thing has a &ldquo;one size fits all&rdquo; memory allocator and malloc seems to do okay. And just like the case of malloc, when the hashtable implementation actually becomes a bottleneck, <em>then</em> you go and write a custom one.</p>
+<p>There is one very interesting design tradeoff when writing a generic container type in C: how do you actually make it generic?</p>
+<p>I&rsquo;ve found that there are generally two approaches: use <code>void*</code> or use <a href="https://github.com/NetBSD/src/blob/trunk/sys/sys/queue.h">lots and lots of macros</a>. The void pointer approach leads to more readable code (imo) but has poorer performance due to the pointer indirection even when the type is something like an <code>int32_t</code>. The macro style looks really annoying to write but is more performant.</p>
+<p>An example of the <code>void*</code> approach is the popular <a href="https://troydhanson.github.io/uthash/">uthash</a> library. A great example of the macro approach is attractivechaos' <a href="http://attractivechaos.github.io/klib/#Khash%3A%20generic%20hash%20table">klib</a> (who I highly recommend you check out!).</p>
+<p>Which would I choose? I&rsquo;m not sure yet but I am leaning towards the macro approach for the performance. Personally, a &ldquo;good enough&rdquo; but fully implemented hashtable is better than no hashtable.</p>
+<h1 id="better-default-rng">Better default RNG</h1>
+<p>C&rsquo;s default random number generator (RNG) is really quite lacking. Currently the interface is the following:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#633820">#include</span> <span style="color:#633820">&lt;stdlib.h&gt;</span><span style="color:#633820">
+</span><span style="color:#633820"></span>
+<span style="color:#a90d91">void</span> <span style="color:#000">srand</span>(<span style="color:#a90d91">unsigned</span> <span style="color:#000">seed</span>);  <span style="color:#177500">// seed rand
+</span><span style="color:#177500"></span><span style="color:#a90d91">int</span> <span style="color:#000">rand</span>(<span style="color:#a90d91">void</span>);             <span style="color:#177500">// generate pseudo random number, (NOT THREAD-SAFE)
+</span><span style="color:#177500"></span><span style="color:#a90d91">int</span> <span style="color:#000">rand_r</span>(<span style="color:#a90d91">unsigned</span> <span style="color:#000">*</span><span style="color:#000">seed</span>); <span style="color:#177500">// thread-safe rand
+</span></code></pre></td></tr></table>
+</div>
+</div><p>A more convenient interface would look like the following:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#a90d91">bool</span> <span style="color:#000">pry_random_bool</span>(<span style="color:#a90d91">struct</span> <span style="color:#000">pry_rng</span> <span style="color:#000">*</span><span style="color:#000">rng</span>);
+<span style="color:#a90d91">int32_t</span> <span style="color:#000">pry_random_int32</span>(<span style="color:#a90d91">struct</span> <span style="color:#000">pry_rng</span> <span style="color:#000">*</span><span style="color:#000">rng</span>);
+<span style="color:#a90d91">int32_t</span> <span style="color:#000">pry_random_int32_between</span>(<span style="color:#a90d91">struct</span> <span style="color:#000">pry_rng</span> <span style="color:#000">*</span><span style="color:#000">rng</span>, <span style="color:#a90d91">int32_t</span> <span style="color:#000">low</span>, <span style="color:#a90d91">int32_t</span> <span style="color:#000">high</span>);
+</code></pre></td></tr></table>
+</div>
+</div><p>My plan is to implement PCG, a family of simple but &ldquo;statistically good&rdquo; RNGs! Additionally, as perhaps an overoptimization, I would also like to implement <a href="https://arxiv.org/abs/1805.10941">Daniel Lemire&rsquo;s method of mapping uniformly random bits to a specific interval</a>.</p>
+<p>The <a href="https://www.pcg-random.org/download.html">PCG website</a> even has a very minimal implementation which shows how easy PCG is to implement:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#177500">// *Really* minimal PCG32 code / (c) 2014 M.E. O&#39;Neill / pcg-random.org
+</span><span style="color:#177500">// Licensed under Apache License 2.0 (NO WARRANTY, etc. see website)
+</span><span style="color:#177500"></span>
+<span style="color:#a90d91">typedef</span> <span style="color:#a90d91">struct</span> { <span style="color:#a90d91">uint64_t</span> <span style="color:#000">state</span>;  <span style="color:#a90d91">uint64_t</span> <span style="color:#000">inc</span>; } <span style="color:#000">pcg32_random_t</span>;
+
+<span style="color:#a90d91">uint32_t</span> <span style="color:#000">pcg32_random_r</span>(<span style="color:#000">pcg32_random_t</span><span style="color:#000">*</span> <span style="color:#000">rng</span>)
+{
+    <span style="color:#a90d91">uint64_t</span> <span style="color:#000">oldstate</span> <span style="color:#000">=</span> <span style="color:#000">rng</span><span style="color:#000">-&gt;</span><span style="color:#000">state</span>;
+    <span style="color:#177500">// Advance internal state
+</span><span style="color:#177500"></span>    <span style="color:#000">rng</span><span style="color:#000">-&gt;</span><span style="color:#000">state</span> <span style="color:#000">=</span> <span style="color:#000">oldstate</span> <span style="color:#000">*</span> <span style="color:#1c01ce">6364136223846793005ULL</span> <span style="color:#000">+</span> (<span style="color:#000">rng</span><span style="color:#000">-&gt;</span><span style="color:#000">inc</span><span style="color:#000">|</span><span style="color:#1c01ce">1</span>);
+    <span style="color:#177500">// Calculate output function (XSH RR), uses old state for max ILP
+</span><span style="color:#177500"></span>    <span style="color:#a90d91">uint32_t</span> <span style="color:#000">xorshifted</span> <span style="color:#000">=</span> ((<span style="color:#000">oldstate</span> <span style="color:#000">&gt;&gt;</span> <span style="color:#1c01ce">18u</span>) <span style="color:#000">^</span> <span style="color:#000">oldstate</span>) <span style="color:#000">&gt;&gt;</span> <span style="color:#1c01ce">27u</span>;
+    <span style="color:#a90d91">uint32_t</span> <span style="color:#000">rot</span> <span style="color:#000">=</span> <span style="color:#000">oldstate</span> <span style="color:#000">&gt;&gt;</span> <span style="color:#1c01ce">59u</span>;
+    <span style="color:#a90d91">return</span> (<span style="color:#000">xorshifted</span> <span style="color:#000">&gt;&gt;</span> <span style="color:#000">rot</span>) <span style="color:#000">|</span> (<span style="color:#000">xorshifted</span> <span style="color:#000">&lt;&lt;</span> ((<span style="color:#000">-</span><span style="color:#000">rot</span>) <span style="color:#000">&amp;</span> <span style="color:#1c01ce">31</span>));
+}
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="string-and-string-functions-that-wont-kill-you">String and String functions (that won&rsquo;t kill you)</h1>
+<p>Enough has been said about the <a href="https://lwn.net/Articles/225108/">many</a> <a href="https://randomascii.wordpress.com/2013/04/03/stop-using-strncpy-already/">problems</a> with C&rsquo;s string functions. There&rsquo;s even a <a href="https://www.openbsd.org/papers/strlcpy-paper.pdf">paper published</a> about OpenBSD&rsquo;s <code>strlcpy</code> which is designed to be a safe alternative to <code>strcpy</code> and <code>strncpy</code>. Every C programmer seems to have their own managed C string library like Antirez&rsquo;s <a href="https://github.com/antirez/sds">SDS</a> or <a href="https://github.com/sheredom/utf8.h">utf8.h</a> (a collection of UTF-8 string library functions).</p>
+<p>One important thing to consider when building such a string library is: how compatible do you want to be with standard C null-terminated strings? SDS, for example, stores metadata in front of a normal <code>char*</code> buffer but always returns a pointer pointing to the buffer. This makes the library compatible with functions which deal with null-terminated strings.</p>
+<p>I may end up making my own string library at some point since it is just a rite of passage for C programmers. It builds character ya know? I will be taking lots of inspiration from SDS and OpenBSD&rsquo;s string functions. A key goal will be to check for the sorts of buffer overflow problems that C&rsquo;s string functions will quietly allow.</p>
+<h1 id="arena-allocator-and-passing-in-allocators">Arena allocator and passing in allocators</h1>
+<p>Every so often, I will become obsessed with different types of memory allocators. It&rsquo;s a very rich field and the problems are quiet fundamental. Every runtime needs to deal with the problems of memory allocation and/or garbage collection. While learning about <a href="https://ziglang.org/">Zig</a>, I came across the idea of an arena allocator. If you haven&rsquo;t heard of them before, I highly recommend Ryan Fleury&rsquo;s <a href="https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator">great blog post</a> or <a href="https://www.rfleury.com/p/enter-the-arena-talk">talk</a> on the subject.</p>
+<p>By using an arena allocator to batch lifetimes and allocations, you can end up writing C with less worrying about memory management. You will still need to be mindful of lifetimes but by using different arenas, the problem becomes much clearer.</p>
+<p>Additionally, a <em>great</em> feature of Zig is that all of the stdlib functions which might heap allocate take in an allocator argument. For example:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Zig" data-lang="Zig"><span style="color:#a90d91">const</span> <span style="color:#000">std</span> <span style="color:#000">=</span> <span style="color:#a90d91">@import</span>(<span style="color:#c41a16">&#34;std&#34;</span>);
+<span style="color:#a90d91">const</span> <span style="color:#000">ally</span> <span style="color:#000">=</span> <span style="color:#000">std</span>.<span style="color:#000">testing</span>.<span style="color:#000">allocator</span>;
+
+<span style="color:#177500">// here we are passing in an allocator for the ArrayList!
+</span><span style="color:#177500"></span><span style="color:#a90d91">var</span> <span style="color:#000">list</span> <span style="color:#000">=</span> <span style="color:#000">std</span>.<span style="color:#000">ArrayList</span>(<span style="color:#a90d91">u32</span>).<span style="color:#000">init</span>(<span style="color:#000">ally</span>);
+<span style="color:#a90d91">defer</span> <span style="color:#000">list</span>.<span style="color:#000">deinit</span>();
+</code></pre></td></tr></table>
+</div>
+</div><p>(taken from the front page example of <a href="https://ziglang.org">https://ziglang.org</a>)</p>
+<p>When designing any library for C, I would strongly urge you to also allow the user to pass in an allocator structure. It can be something as simple as:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#a90d91">struct</span> <span style="color:#000">my_allocator</span> {
+    <span style="color:#a90d91">void</span> <span style="color:#000">*</span>(<span style="color:#000">*</span><span style="color:#000">my_malloc</span>)(<span style="color:#000">size_t</span>);
+    <span style="color:#a90d91">void</span> <span style="color:#000">*</span>(<span style="color:#000">*</span><span style="color:#000">my_realloc</span>)(<span style="color:#a90d91">void</span><span style="color:#000">*</span>, <span style="color:#000">size_t</span>);
+    <span style="color:#a90d91">void</span> (<span style="color:#000">*</span><span style="color:#000">my_free</span>)(<span style="color:#a90d91">void</span><span style="color:#000">*</span>);
+};
+
+<span style="color:#a90d91">int</span> <span style="color:#000">my_heap_allocating_function</span>(<span style="color:#177500">/* whatever args here*/</span>, <span style="color:#a90d91">struct</span> <span style="color:#000">my_allocator</span> <span style="color:#000">*</span><span style="color:#000">alloc</span>);
+</code></pre></td></tr></table>
+</div>
+</div><p>with a struct of function pointers to a malloc, realloc, and free function.</p>
+<p>I think that I would personally implement an arena allocator on top of the standard system-provided malloc and in addition, allow users to pass in their own malloc implementation instead (maybe <a href="https://jemalloc.net/">jemalloc</a> or <a href="https://google.github.io/tcmalloc/overview.html">tcmalloc</a>)!</p>
+<h1 id="consistent-errors">Consistent errors</h1>
+<p>One of my biggest annoyances with writing any C at all is the error handling. It really is hard to go back after being exposed to Algebraic types like those in <a href="https://doc.rust-lang.org/std/result/">Rust</a> or <a href="https://ocaml.org/manual/5.2/api/Result.html">OCaml</a>.</p>
+<p>There are several possible ways of handling errors in C and really not a single one is that satisfying. You can:</p>
+<ul>
+<li>Return an error value like an <code>int</code> or a <code>ssize_t</code>. (This requires that your function has some sort of sentinel value like 0 or -1 which cannot be a valid return value if your function is returning a value. This is why <code>ssize_t</code> even exists.)</li>
+<li>Pass in an error struct or variable by reference and set it within the function. For whatever reason, this feels clunky to me? But it still beats having to look up what value returned is an error or not. Is it 0? -1? NULL? Who knows!?!?</li>
+<li>Something like errno. But preferably stored within some sort of library context struct. For example, if I have a hashtable, I can add an errno directly to the hashtable structure with no downside that I can see. If you are instead storing something in a global error variable, you will need to be careful in the case of multiple threads writing to the same variable. Always consider whether what you are writing is thread-safe or not and if not at least mention that your function is not thread-safe!</li>
+</ul>
+<h1 id="testing-harness">Testing harness</h1>
+<p>Finally, while making such a personal standard library, you&rsquo;ll need to test it. Right? You will test your code right??? So to do this, it makes sense to have a small, minimal unit testing harness. Something like <a href="https://github.com/jasmcaus/tau">tau</a> or <a href="https://github.com/sheredom/utest.h">utest.h</a> which are my favorite minimal testing libraries.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This was really an excuse to organize my thoughts on useful libraries that I always reach for. I&rsquo;m really curious to hear your thoughts&hellip;</p>
+<ul>
+<li>Anything I missed that you need often?</li>
+<li>Anything you disagree with?</li>
+<li>or even just more cool libraries that I haven&rsquo;t mentioned</li>
+</ul>
+<p>Also finally, I plan to most more of these &ldquo;stream of consciousness&rdquo; blog posts just to get back into the habit of writing more consistently. Please give me feedback and let me know what works and what doesn&rsquo;t. Thanks.</p>
+<p>&ndash; pry</p>
+
+    </div>
+  </article>
+
+  <script src="https://utteranc.es/client.js"
+        repo="prydt/blog"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">All posts</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&text=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&is_video=false&description=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=What%20I%20Want%20From%20a%20C%20stdlib&body=Check out this article: https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&title=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&name=What%20I%20Want%20From%20a%20C%20stdlib&description=or%20what%20I%20always%20end%20up%20needing%20in%20C%0a%20Hi%21%20I%20haven%26rsquo%3bt%20blogged%20in%20a%20while%20but%20over%20this%20summer%20I%20plan%20to%20change%20that.%20I%26rsquo%3bll%20just%20be%20writing%20about%20random%20things%20on%20my%20mind.%20I%26rsquo%3bve%20been%20writing%20more%20C%20lately%20so%20I%20think%20I%26rsquo%3bll%20do%20what%20is%20a%20rite%20of%20passage%20for%20systems%20programmers%3a%20complain%20about%20C%20and%20rant%20that%20my%20specific%20needs%20would%20be%20better%20met%20with%20yet%20another%20standard%20library%20replacement." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.prydt.xyz%2fposts%2fwhat-i-want-from-a-c-stdlib%2f&t=What%20I%20Want%20From%20a%20C%20stdlib" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024  Pranoy Dutta 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">All posts</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="https://prydt.xyz">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
