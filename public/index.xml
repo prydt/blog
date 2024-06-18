@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Pranoy Dutta</copyright>
-    <lastBuildDate>Sat, 01 Jun 2024 00:26:01 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jun 2024 13:42:01 -0500</lastBuildDate><atom:link href="https://blog.prydt.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chain Replication Video Transcript</title>
+      <link>https://blog.prydt.xyz/posts/chain-replication-transcript/</link>
+      <pubDate>Tue, 18 Jun 2024 13:42:01 -0500</pubDate>
+      
+      <guid>https://blog.prydt.xyz/posts/chain-replication-transcript/</guid>
+      <description>I&amp;rsquo;ve recently released a video explaining chain replication. You can see it here: https://www.youtube.com/watch?v=0ZPNOIMyVCw
+Below is my rough draft script for the video. Enjoy!
+[TITLE SLIDE] Hi everyone, my name is Pry and I’ll be explaining Chain Replication.
+[PAPER INFO SLIDE] The original paper is by Renesse &amp;amp; Schneider presented at OSDI 2004 so it&amp;rsquo;s exactly 20 years old now.
+[MOTIVATION SLIDE] First, let me motivate the problem that chain replication is trying to solve.</description>
+    </item>
+    
     <item>
       <title>What I Want From a C stdlib</title>
       <link>https://blog.prydt.xyz/posts/what-i-want-from-a-c-stdlib/</link>
